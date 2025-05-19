@@ -9,31 +9,31 @@ graph TD
     User -->|1. www.foobar.com| DNS_Resolver
     DNS_Resolver -->|2. IP for www.foobar.com| User
     User -->|3. HTTP/HTTPS Request| Load_Balancer[HAProxy Load Balancer]
-    
-    subgraph Web Servers
+
+    subgraph Web_Servers
         Web_Server1[Nginx Web Server 1]
         Web_Server2[Nginx Web Server 2]
     end
-    
-    subgraph Application Servers
+
+    subgraph Application_Servers
         App_Server1[Application Server 1]
         App_Server2[Application Server 2]
     end
-    
-    subgraph Database Cluster
+
+    subgraph Database_Cluster
         DB_Primary[(MySQL Primary)]
         DB_Replica[(MySQL Replica)]
     end
-    
+
     Load_Balancer -->|Round Robin| Web_Server1
     Load_Balancer -->|Round Robin| Web_Server2
-    
+
     Web_Server1 --> App_Server1
     Web_Server2 --> App_Server2
-    
+
     App_Server1 --> DB_Primary
     App_Server2 --> DB_Primary
-    
+
     DB_Primary -->|Replication| DB_Replica
 ```
 
