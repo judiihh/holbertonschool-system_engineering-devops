@@ -6,8 +6,8 @@ This document outlines the design of a distributed web infrastructure with three
 
 ```mermaid
 graph TD
-    User -->|www.foobar.com| DNS_Resolver
-    DNS_Resolver -->|IP for www.foobar.com| User
+    User -->|foobar.com| DNS_Resolver
+    DNS_Resolver -->|IP for foobar.com| User
     User -->|HTTP/HTTPS Request| Load_Balancer[HAProxy Load Balancer]
 
     subgraph Web_Servers
