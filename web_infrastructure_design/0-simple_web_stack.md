@@ -6,17 +6,17 @@ This document outlines the design of a basic, single-server web infrastructure.
 
 ```mermaid
 graph TD
-    User -->|1. www.foobar.com| DNS_Resolver
-    DNS_Resolver -->|2. IP for www.foobar.com (8.8.8.8)| User
-    User -->|3. HTTP/HTTPS Request to 8.8.8.8| Load_Balancer_Firewall(Firewall / Load Balancer - Conceptually, though single server here)
-    Load_Balancer_Firewall -->|4. Forward Request| Web_Server[Nginx Web Server]
-    Web_Server -->|5. Request to handle dynamic content| App_Server[Application Server]
-    App_Server -->|6. Processes request, queries DB| Database[(MySQL Database)]
-    Database -->|7. Returns data| App_Server
-    App_Server -->|8. Returns processed data/page| Web_Server
-    Web_Server -->|9. HTTP/HTTPS Response (HTML, CSS, JS)| User
+    User -->|foobar.com| DNS_Resolver
+    DNS_Resolver -->|IP for foobar.com - 8.8.8.8| User
+    User -->|HTTP/HTTPS Request to 8.8.8.8| Load_Balancer_Firewall[Firewall / Load Balancer]
+    Load_Balancer_Firewall -->|Forward Request| Web_Server[Nginx Web Server]
+    Web_Server -->|Request to handle dynamic content| App_Server[Application Server]
+    App_Server -->|Processes request, queries DB| Database[(MySQL Database)]
+    Database -->|Returns data| App_Server
+    App_Server -->|Returns processed data/page| Web_Server
+    Web_Server -->|HTTP/HTTPS Response| User
 
-    subgraph Server (IP: 8.8.8.8)
+    subgraph Server[IP: 8.8.8.8]
         Web_Server
         App_Server
         Database
