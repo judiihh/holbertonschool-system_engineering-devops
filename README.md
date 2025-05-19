@@ -1,38 +1,48 @@
-# 🌐 Web Stack Debugging Project
+# 🌐 Web Infrastructure Design Project
 
-This project focuses on understanding and documenting web stack architecture, system redundancy, and key concepts in web infrastructure.
+This project focuses on designing and documenting web infrastructure architectures, from simple to complex setups, with a focus on security, monitoring, and scalability.
 
 ## 📋 Project Requirements
 
 ### 🎯 General Requirements
-- Create diagrams covering the web stack built during the sysadmin/devops track projects
-- Explain each component's functionality
-- Explain system redundancy
-- Understand key acronyms: LAMP, SPOF, QPS
+- Create diagrams covering different web infrastructure designs
+- Explain each component's functionality and purpose
+- Understand system redundancy and high availability
+- Document security and monitoring considerations
+- Explain scaling strategies
 
 ### ✅ Task Requirements
 1. For each task:
-   - Create a whiteboard diagram (using any preferred method)
-   - Take a screenshot of the completed diagram
-   - Upload the screenshot to an image hosting service
-   - Include the image link in the answer file
-   - Push the answer file to GitHub
-   - Be prepared to whiteboard the solution in front of a mentor/staff/student
+   - Create a diagram using Mermaid
+   - Document the infrastructure design
+   - Explain component purposes and interactions
+   - Detail security and monitoring considerations
+   - Push the documentation to GitHub
 
 ### 🔑 Key Concepts to Cover
-- LAMP Stack components and their roles
-- Single Point of Failure (SPOF) identification and mitigation
-- Queries Per Second (QPS) considerations
-- System redundancy strategies
+- Web server vs Application server roles
+- Load balancing and high availability
+- Database replication and clustering
+- SSL/TLS and security measures
+- Monitoring and metrics collection
+- Infrastructure scaling strategies
 
 ## 📁 Project Structure
 - `README.md` - This file
-- `0-the_sky_is_the_limit_not.pp` - Diagram and explanation of web stack
-- `1-user_authentication.pp` - User authentication flow diagram
-- Additional task files as needed
+- `0-simple_web_stack` - Basic single-server web infrastructure
+- `1-distributed_web_infrastructure` - Three-server distributed setup
+- `2-secured_and_monitored_web_infrastructure` - Secure and monitored infrastructure
+- `3-scale_up` - Scaled-up infrastructure with dedicated servers
 
 ## 📝 Notes
-- Focus on requirements without unnecessary details
-- Prepare for 30-minute whiteboarding sessions
-- Be concise and clear in explanations
-- Ask for clarification if needed 
+- Each infrastructure design builds upon the previous one
+- Focus on practical, production-ready solutions
+- Consider security, monitoring, and scalability
+- Document all design decisions and their rationale
+- Use clear, professional English in all documentation 
+
+## Author ✍️
+Judith - Holberton School Student
+
+## License 📄
+This project is part of the Holberton School curriculum and is for educational purposes only.
