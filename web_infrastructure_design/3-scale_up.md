@@ -6,10 +6,10 @@ This document outlines the design of a scaled-up web infrastructure with dedicat
 
 ```mermaid
 graph TD
-    User -->|1. www.foobar.com| DNS_Resolver
-    DNS_Resolver -->|2. IP for www.foobar.com| User
-    User -->|3. HTTPS Request| Firewall1[Firewall 1]
-    Firewall1 -->|4. Filtered HTTPS| LB_Cluster[HAProxy Load Balancer Cluster]
+    User -->|foobar.com| DNS_Resolver
+    DNS_Resolver -->|IP for www.foobar.com| User
+    User -->|HTTPS Request| Firewall1[Firewall 1]
+    Firewall1 -->|Filtered HTTPS| LB_Cluster[HAProxy Load Balancer Cluster]
     
     subgraph Load Balancer Cluster
         LB1[HAProxy 1]
