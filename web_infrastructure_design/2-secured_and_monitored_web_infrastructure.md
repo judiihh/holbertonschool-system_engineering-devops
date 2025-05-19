@@ -6,10 +6,10 @@ This document outlines the design of a secured and monitored web infrastructure 
 
 ```mermaid
 graph TD
-    User -->|1. www.foobar.com| DNS_Resolver
-    DNS_Resolver -->|2. IP for www.foobar.com| User
-    User -->|3. HTTPS Request| Firewall1[Firewall 1]
-    Firewall1 -->|4. Filtered HTTPS| Load_Balancer[HAProxy Load Balancer]
+    User -->|foobar.com| DNS_Resolver
+    DNS_Resolver -->|IP for www.foobar.com| User
+    User -->|HTTPS Request| Firewall1[Firewall 1]
+    Firewall1 -->|Filtered HTTPS| Load_Balancer[HAProxy Load Balancer]
     
     subgraph Web Servers
         Firewall2[Firewall 2]
